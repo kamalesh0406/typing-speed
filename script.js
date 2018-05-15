@@ -11,15 +11,17 @@ text.addEventListener('keydown',function(){
 	}
 	text1 = text.value
 	if (check[character]!==text1[character]){
+		text.style.color = "red";
 		text.maxLength=character+1;
 	}
 	else{
+		text.style.color = "green" ;
 		character++;
 		text.maxLength = check.length;
 	}
 	if(character == check.length){
 		stop = new Date().getTime();
-		speed = (check.length)/((stop-start)/1000);
+		speed = Math.floor((check.length)/((stop-start)/1000));
 		alert("Your typing speed is "+speed+" words/second")
 	}
 })
