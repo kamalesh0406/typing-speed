@@ -23,5 +23,7 @@ text.addEventListener('keydown',function(){
 		stop = new Date().getTime();
 		speed = Math.floor((check.length)/((stop-start)/1000));
 		alert("Your typing speed is "+speed+" words/second")
+		character = 0;
+		check='';
 	}
 })
